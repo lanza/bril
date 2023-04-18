@@ -180,6 +180,7 @@ impl Display for Code {
 
 /// <https://capra.cs.cornell.edu/bril/lang/syntax.html#instruction>
 #[cfg_attr(not(feature = "float"), derive(Eq))]
+#[cfg_attr(not(feature = "position"), derive(Hash))]
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
 #[serde(untagged)]
 pub enum Instruction {
